@@ -5,21 +5,22 @@ import { Component } from 'react';
 import { Switch, Route, Link } from "react-router-dom";
 
 import AddData  from './components/add-data.component';
+import ListData  from './components/list-data.component';
 
 class App extends Component {
   render() { 
     return (
       <div>
-        <nav className="navbar navbar-expand navbar-dark bg-black">
+        <nav className="navbar navbar-expand navbar-dark bg-primary">
           <a href="/tutorials" className="navbar-brand">
-            iiky21
+            dLAW
           </a>
           <div className="navbar-nav mr-auto">
-            {/* <li className="nav-item">
+            <li className="nav-item">
               <Link to={"/tutorials"} className="nav-link">
                 Tutorials
               </Link>
-            </li> */}
+            </li>
             <li className="nav-item">
               <Link to={"/add"} className="nav-link">
                 Add
@@ -29,7 +30,7 @@ class App extends Component {
         </nav>
         <div className="container mt-3">
           <Switch>
-            {<Route exact path={["/","/tutorials"]} component={AddData} />}
+            <Route exact path={["/","/tutorials"]} component={ListData} />
             <Route exact path="/add" component={AddData} />
             {/* <Route path="/tutorials/:id" component={Tutorial} /> */}
           </Switch>
